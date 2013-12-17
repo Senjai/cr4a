@@ -7,16 +7,17 @@ require "pdf_renderer/version"
 Gem::Specification.new do |s|
   s.name        = "pdf_renderer"
   s.version     = PdfRenderer::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of PdfRenderer."
-  s.description = "TODO: Description of PdfRenderer."
+  s.authors     = ["Richard Wilson", "Jose Valim"]
+  s.email       = ["richard@freerunningtech.com"]
+  s.homepage    = "www.freerunningtech.com"
+  s.summary     = "A pdf renderer plugin"
+  s.description = "As created in Crafting Rails 4 Applications"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["test/**/*"]
 
   s.add_dependency "rails", "~> 4.0.0"
+  s.add_dependency "prawn", "0.12.0"
 
   s.add_development_dependency "sqlite3"
 end
