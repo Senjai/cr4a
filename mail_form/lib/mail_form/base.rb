@@ -10,13 +10,26 @@ module MailForm
     attribute_method_prefix 'clear_'
     attribute_method_suffix '?'
 
+    class_attribute :attribute_names
+    self.attribute_names = []
+
     def self.attributes(*names)
       attr_accessor(*names)
       define_attribute_methods(names)
+
+      self.attribute_names += names
     end
 
     def persisted?
       false
+    end
+
+    def deliver
+      if valid?
+        MailForm::Notifier.contact(self).deliver
+      else
+        false
+      end
     end
 
     protected
