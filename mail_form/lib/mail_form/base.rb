@@ -3,6 +3,7 @@ module MailForm
     include ActiveModel::AttributeMethods
     include ActiveModel::Conversion
     include ActiveModel::Validations
+    include MailForm::Validators
 
     extend ActiveModel::Naming
     extend ActiveModel::Translation
