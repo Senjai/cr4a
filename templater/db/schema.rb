@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140201214416) do
+ActiveRecord::Schema.define(version: 20140201223236) do
 
   create_table "sql_templates", force: true do |t|
     t.text     "body"
@@ -20,6 +20,12 @@ ActiveRecord::Schema.define(version: 20140201214416) do
     t.string   "locale"
     t.string   "handler"
     t.boolean  "partial",    default: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", force: true do |t|
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

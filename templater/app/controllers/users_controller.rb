@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  append_view_path SqlTemplate::Resolver.new
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
   # GET /users
