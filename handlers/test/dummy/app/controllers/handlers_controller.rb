@@ -1,2 +1,0 @@
-class HandlersController < ApplicationController
-end
