@@ -8,4 +8,10 @@ class RenderingTest < ActionDispatch::IntegrationTest
 
     assert_match expected, response.body
   end
+
+  test ".string template handler" do
+    get "/handlers/string_handler"
+    expected = "Congratulations! You just created another template handler!"
+    assert_match expected, response.body
+  end
 end
