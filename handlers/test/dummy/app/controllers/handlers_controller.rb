@@ -1,0 +1,2 @@
+class HandlersController < ApplicationController
+end
