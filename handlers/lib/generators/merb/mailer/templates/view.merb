@@ -1,0 +1,2 @@
+<%= class_name %>#<%= @action %>
+<%%= @greeting %>, find me in app/views/<%= @path %>
