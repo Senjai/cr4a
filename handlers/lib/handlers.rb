@@ -1,3 +1,4 @@
+require 'handlers/railtie'
 require 'action_view/template'
 require 'rdiscount'
 
