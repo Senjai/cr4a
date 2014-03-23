@@ -20,4 +20,10 @@ class RenderingTest < ActionDispatch::IntegrationTest
     expected = "<p>RDiscount is <em>cool</em> and <strong>fast</strong>!</p>"
     assert_match expected, response.body
   end
+
+  test ".merb template handler" do
+    get "handlers/merb"
+    expected = "<p>MERB template handler is <strong>cool and fast</strong>!</p>"
+    assert_match expected, response.body.strip
+  end
 end
